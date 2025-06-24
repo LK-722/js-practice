@@ -1,0 +1,1471 @@
+/*
+console.log("I am trying");
+
+const passtest = true;
+
+if (passtest) hasDriversLicense = true;
+if (hasDriversLicense) console.log("Yeah I have drivers license");
+
+function driver(hasDriversLicense) {
+  if (hasDriversLicense) {
+    console.log("yeah baby");
+  }
+}
+console.log(driver(hasDriversLicense));
+*/
+/*
+function crimes(murder, maim) {
+  console.log(murder, maim);
+  if (murder >= 1 || maim >= 3) {
+    console.log("This person recieves death sentence");
+  } else if (murder === 0 && maim >= 2) {
+    console.log("This should be behind the bars for 2 years");
+  } else {
+    console.log("This person is innocent");
+  }
+}
+// I havn't learnt how to input value
+const criminal = crimes(1, 2);
+*/
+/*
+const criminal1 = {
+  fullName: "Lilly",
+  birthYear: 2003,
+  murders: 2,
+  maims: 5,
+
+  calcPunisment: function () {
+    if (this.murders >= 5 || this.maims >= 10) {
+      console.log("life imprisonment");
+    } else if (this.murders >= 1 && this.maims >= 3) {
+      console.log("Death sentence");
+    } else if (this.murders === 0 && this.maims >= 2) {
+      console.log("2 years in prison");
+    } else {
+      console.log("Innocent");
+    }
+    // return this.calcPunisment;
+  },
+  yearsUntilRetirement: function () {
+    const age = 2025 - this.birthYear;
+    const retirement = 65 - age;
+    console.log(`this person retires in ${retirement} years`);
+    return retirement;
+  },
+};
+*/
+/*
+function calcPunishment() {
+  if (this.murders >= 5 || this.maims >= 10) {
+    console.log("life imprisonment");
+  } else if (this.murders >= 1 && this.maims >= 3) {
+    console.log("Death sentence");
+  } else if (this.murders === 0 && this.maims >= 2) {
+    console.log("2 years in prison");
+  } else {
+    console.log("Innocent");
+  }
+}
+function yearsUntilRetirement() {
+  const age = 2025 - this.birthYear;
+  return 65 - age;
+}
+
+function createCriminal(fullName, birthYear, murders, maims) {
+  return {
+    fullName,
+    birthYear,
+    murders,
+    maims,
+    calcPunishment,
+    yearsUntilRetirement,
+  };
+}
+const criminal1 = createCriminal("lilly", 2003, 2, 5);
+console.log(
+  `${
+    criminal1.fullName
+  }: ${criminal1.calcPunishment()}, retires in ${criminal1.yearsUntilRetirement()} years`
+);
+*/
+/*
+function calcPunishment() {
+  if (this.murders >= 5 || this.maims >= 10) {
+    return "Life imprisonment";
+  } else if (this.murders >= 1 && this.maims >= 3) {
+    return "Death sentence";
+  } else if (this.murders === 0 && this.maims >= 2) {
+    return "2 years in prison";
+  } else {
+    return "Innocent";
+  }
+}
+
+// Shared method for retirement
+function yearsUntilRetirement() {
+  const age = 2025 - this.birthYear;
+  return 65 - age;
+}
+
+// Factory function to create criminals
+function createCriminal(fullName, birthYear, murders, maims) {
+  return {
+    fullName,
+    birthYear,
+    murders,
+    maims,
+    calcPunishment,
+    yearsUntilRetirement,
+  };
+}
+
+// Create criminals
+const criminal1 = createCriminal("Lilly", 2003, 2, 5);
+const criminal2 = createCriminal("John", 2000, 5, 10);
+
+// Use methods
+console.log(
+  `${
+    criminal1.fullName
+  }: ${criminal1.calcPunishment()}, retires in ${criminal1.yearsUntilRetirement()} years`
+);
+console.log(
+  `${
+    criminal2.fullName
+  }: ${criminal2.calcPunishment()}, retires in ${criminal2.yearsUntilRetirement()} years`
+);
+*/
+/*
+// callenge 1
+function calcCelsius(celsius) {
+  const fahrenheit = (celsius * 9) / 5 + 32;
+  return fahrenheit;
+}
+console.log(calcCelsius(1));
+// challenge 3
+function greeting(day) {
+  if (day === "weekend") {
+    console.log("Yeah today is weekend");
+  } else {
+    console.log("Oh it is weekday");
+  }
+}
+console.log(greeting("weeken"));
+*/
+// const numbers = [1, 4, 7, 10, 15, 18, 22];
+// const evenNumbers = [];
+
+// for (let i = 0; i < numbers.length; i++) {}
+/*
+let num = 1;
+sum = 0;
+while (num <= 20) {
+  if (num % 2 === 0) {
+    sum += num;
+  }
+  num++;
+  console.log(sum);
+}
+*/
+/*
+let count = 0;
+while (count <= 10) {
+  console.log(count);
+  count++;
+  if (count === 11) {
+    console.log("Liftoff!");
+  }
+}
+*/
+/*
+let num = 1;
+while (num <= 30) {
+  if (num % 2 === 1) {
+    console.log(num);
+  }
+  num++;
+}
+*/
+/*
+let nums = [3, 6, 1, 8, 5, 10];
+let i = 0;
+while (i < nums.length) {
+  if (nums[i] % 2 === 0) {
+    nums[i] = nums[i] * 2;
+  }
+  i++;
+}
+console.log(nums);
+*/
+/*
+let nums = [2, 5, 7, 4, 9, 6];
+let n = 0;
+let sum = 0;
+while (n < nums.length) {
+  if (nums[n] % 2 === 1) {
+    sum += nums[n] * nums[n];
+  }
+  console.log(nums);
+  n++;
+}
+console.log(sum);
+*/
+/*
+let nums = [10, 15, 20, 25, 30, 35];
+let n = 0;
+let sum = 0;
+let count = 0;
+let average = 0;
+
+while (n < nums.length) {
+  if (nums[n] % 2 === 0) {
+    sum += nums[n];
+    count++;
+    average = sum / count;
+  }
+  n++;
+}
+console.log(sum, count, average);
+*/
+/*
+let original = [4, 7, 2, 9, 12];
+let doubledOdds = [];
+let n = 0;
+
+while (n < original.length) {
+  if (original[n] % 2 !== 0) {
+    let doubled = original[n] * 2;
+    doubledOdds.push(doubled);
+  }
+  n++;
+}
+console.log(doubledOdds);
+*/
+/*
+let nums = [3, 6, 9, 12];
+let totalSum = nums.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(totalSum);
+*/
+/*
+let nums = [4, 8, 12, 16];
+let allEven = nums.every((num) => num % 2 === 0);
+console.log(allEven);
+*/
+
+/*
+// first way
+const prices = [4, 8, 15, 16, 23, 42];
+const discountPrices = prices.map((price) => {
+  if (price % 2 === 0) {
+    return price * 7;
+  } else {
+    return price;
+  }
+});
+console.log(discountPrices);
+
+// second way
+const secondPrices = prices.map((price) => price * 0.5);
+console.log(secondPrices);
+
+// reduce
+const totalPrice = prices.reduce((total, currentPrice) => {
+  return total + currentPrice;
+}, 0);
+console.log(totalPrice);
+*/
+/*
+const team1 = ["Neuer", "Kimmich", "Müller"];
+const team2 = ["Ramos", "Benzema", "Modric"];
+
+const allPlayers = [...team1, ...team2];
+console.log(allPlayers);
+*/
+/*
+let i = 0;
+const listPlayers = function (...players) {
+  for (let i = 0; i < players.length; i++) {
+    console.log(`Player ${i + 1}: ${players[i]}`);
+  }
+};
+
+listPlayers("a", "b", "k");
+*/
+/*
+const isCaptain = true;
+
+isCaptain && console.log("He is the captain!");
+
+const userInput = "";
+const username = userInput || "Guest";
+*/
+/*
+const team1 = [
+  { name: "Neuer" },
+  { name: "Kimmich", goals: 2 },
+  { name: "Müller", goals: 3 },
+];
+
+const team2 = [
+  { name: "Ramos", goals: 1 },
+  { name: "Benzema", goals: 0 },
+  { name: "Modric" },
+];
+
+const allPlayers = [...team1, ...team2];
+console.log(...allPlayers);
+
+const noGoals = allPlayers.filter((Players) => Players.goals > 0);
+console.log(noGoals);
+
+const details = noGoals.map(
+  (player) => `${player.name} scored ${player.goals} goals`
+);
+console.log(details);
+
+const totalGoals = noGoals.reduce((sum, player) => sum + player.goals, 0);
+console.log(totalGoals);
+
+totalGoals ?? console.log("No goals scored yet");
+*/
+/*
+const nums = [5, 12, 8, 130, 44];
+
+const result = nums.filter((num) => num > 10);
+console.log(result);
+*/
+
+/*
+const nums = [1, 2, 3, 4, 5, 6];
+const even = nums.filter((num) => num % 2 == 0);
+console.log(even);
+*/
+/*
+const names = ["Ana", "Steve", "Li", "Jonathan", "Eva"];
+
+const longNames = names.filter((num) => num.length > 4);
+console.log(longNames);
+*/
+/*
+const words = ["hello", "", "world", "", "JS"];
+const empty = words.filter((strings) => strings !== "");
+console.log(empty);
+*/
+/*
+const users = [
+  { name: "Alice", active: true },
+  { name: "Bob", active: false },
+  { name: "Carol", active: true },
+];
+
+const active1 = users.filter((activeuser) => activeuser.active);
+console.log(active1);
+*/
+/*
+const products = [
+  { name: "Pen", inStock: 10 },
+  { name: "Notebook", inStock: 0 },
+  { name: "Eraser", inStock: 3 },
+];
+
+const keep = products.filter((stocks) => stocks.inStock);
+console.log(keep);
+*/
+/*
+const votes = [
+  "Müller",
+  "",
+  "Kimmich",
+  "Ramos",
+  undefined,
+  "Kimmich",
+  "Neuer",
+  "Müller",
+  "Müller",
+  null,
+  "Ramos",
+  "Modric",
+  "Ramos",
+];
+
+const filtered = votes.filter((remove) => remove);
+console.log(filtered);
+
+const voteCount = filtered. reduce(Sum , currentPlayer => )
+*/
+// reduce
+/*
+const numbers = [3, 7, 2, 9];
+const sum = numbers.reduce((total, numberss) => total + numberss, 0);
+console.log(sum);
+*/
+/*
+const words = ["Lion", "Tiger", "Elephant"];
+const characters = words.reduce(
+  (number, characters) => number + characters.length,
+  0
+);
+console.log(characters);
+*/
+/*
+const players = [
+  { name: "Müller", goals: 2 },
+  { name: "Ramos", goals: 1 },
+  { name: "Modric", goals: 3 },
+];
+const totalGoals = players.reduce((sum, score) => sum + score.goals, 0);
+console.log(totalGoals);
+*/
+/*
+const players = [
+  { name: "Müller", team: "Germany" },
+  { name: "Ramos", team: "Spain" },
+  { name: "Neuer", team: "Germany" },
+  { name: "Modric", team: "Croatia" },
+  { name: "Pedri", team: "Spain" },
+];
+
+const member = {};
+
+const filtered = players.reduce((sum, player) => {
+  if (sum[player.team]) {
+    sum[player.team].push(player.name);
+  } else {
+    sum[player.team] = [player.name];
+  }
+  return sum;
+}, {});
+console.log(filtered);
+
+const playerCount = players.reduce((key, player) => {
+  if (key[player.team]) {
+    key[player.team] += 1;
+  } else {
+    key[player.team] = 1;
+  }
+  return key;
+}, {});
+console.log(playerCount);
+*/
+/*
+const str = "bananas";
+const split = str.split("");
+console.log(split);
+
+const numberCount = split.reduce((acc, alphabat) => {
+  if (acc[alphabat]) {
+    acc[alphabat] += 1;
+  } else {
+    acc[alphabat] = 1;
+  }
+  return acc;
+}, {});
+console.log(numberCount);
+*/
+/*
+
+const words = ["Lion", "Elephant", "Cat", "Giraffe"];
+const longest = words.reduce((number, word) => {
+  if (word.length > number.length) {
+    return word;
+  } else {
+    return number;
+  }
+}, "");
+console.log(longest);
+*/
+/*
+const users = [
+  { id: 101, name: "Alice" },
+  { id: 102, name: "Bob" },
+  { id: 103, name: "Charlie" },
+];
+
+const byNumber = users.reduce((no, name) => {
+  no[name.id] = name.name;
+  return no;
+}, {});
+console.log(byNumber);
+*/
+/*
+const items = ["apple", "banana", "apple", "orange", "banana", "grape"];
+
+const single = items.reduce((acc, fruit) => {
+  if (!acc.includes(fruit)) {
+    acc.push(fruit);
+  }
+  return acc;
+}, []);
+
+console.log(single);
+*/
+
+/*
+const user1 = { name: "L", age: 26, skills: ["JavaScript", "HTML"] };
+const user2 = { age: 28, country: "India", skills: ["CSS", "React"] };
+
+const users = {
+  ...user1,
+  ...user2,
+  skills: [...new Set([...user1.skills, ...user2.skills])],
+};
+console.log(users);
+*/
+/*
+const colors = ["red", "green", "blue"];
+const combined = colors.join("-");
+console.log(combined);
+*/
+/*
+const animals = ["dogs", "cats", "birds"];
+function iLike() {
+  return `I like ${animals.join(",")}`;
+}
+console.log(iLike());
+*/
+/*
+const words = ["just", "do", "it"];
+function doIt() {
+  return `#${words.join("")}`;
+}
+console.log(doIt());
+*/
+/*
+const users = [
+  { name: "L", skills: ["JavaScript", "HTML"] },
+  { name: "Aisha", skills: ["React", "CSS", "Node.js"] },
+  { name: "Kai", skills: ["Python"] },
+];
+
+const para = users.map((names) => ${users.name}  )
+*/
+/*
+const nums = [11, 42, 33, 74, 55, 68, 90];
+const filtered = nums.filter((num) => num % 2 === 0);
+console.log(filtered);
+*/
+/*
+const fruits = ["apple", "kiwi", "banana", "fig", "grape", "melon"];
+const filtered = fruits.filter((fruit) => fruit.length >= 5);
+console.log(filtered);
+*/
+/*
+const people = [
+  { name: "L", age: 26 },
+  { name: "Arya", age: 17 },
+  { name: "Zoya", age: 30 },
+  { name: "Ishaan", age: 15 },
+  { name: "Meera", age: 22 },
+];
+const under18 = people.filter((people) => people.age >= 18);
+console.log(under18);
+*/
+/*
+const users = [
+  { name: "L", active: true, age: 26 },
+  { name: "Arya", active: false, age: 17 },
+  { name: "Zoya", active: true, age: 30 },
+  { name: "Ishaan", active: false, age: 20 },
+  { name: "Meera", active: true, age: 16 },
+];
+
+const filtered = users.filter(
+  (person) => person.active === true && person.age >= 18
+);
+console.log(filtered);
+*/
+/*
+const products = [
+  { name: "Yoga Mat", price: 1200, inStock: true, tags: ["fitness", "home"] },
+  {
+    name: "Treadmill",
+    price: 45000,
+    inStock: false,
+    tags: ["fitness", "cardio"],
+  },
+  { name: "Dumbbells", price: 2500, inStock: true, tags: ["strength", "gym"] },
+  { name: "Pull-up Bar", price: 1800, inStock: true, tags: ["gym", "home"] },
+  {
+    name: "Resistance Bands",
+    price: 800,
+    inStock: true,
+    tags: ["fitness", "portable"],
+  },
+];
+
+const filtered = products.filter(
+  (product) =>
+    product.inStock === true &&
+    product.price < 3000 &&
+    product.tags.includes("fitness")
+);
+console.log(filtered);
+*/
+/*
+const products = [
+  { name: "Yoga Mat", price: 1200 },
+  { name: "Dumbbells", price: 2500 },
+  { name: "Treadmill", price: 45000 },
+];
+const find = products.find((dum) => dum.name === "Dumbbells");
+console.log(find);
+*/
+/*
+const candidates = [
+  { name: "L", skills: ["JavaScript", "HTML", "CSS"], experience: 2 },
+  { name: "Arya", skills: ["JavaScript", "React"], experience: 1 },
+  { name: "Zoya", skills: ["Python", "Django"], experience: 3 },
+  { name: "Ishaan", skills: ["JavaScript", "Vue"], experience: 2 },
+];
+
+const find = candidates.find(
+  (right) => right.skills.includes("JavaScript") && right.experience >= 2
+);
+console.log(find);
+*/
+/*
+const users = [
+  { name: "L", email: "l@domain.com", active: true, plan: "premium" },
+  { name: "Arya", email: "arya@domain.com", active: false, plan: "free" },
+  { name: "Zoya", email: "zoya@domain.com", active: true, plan: "premium" },
+  { name: "Ishaan", email: "ishaan@domain.com", active: true, plan: "free" },
+  { name: "Meera", email: "meera@domain.com", active: true, plan: "premium" },
+];
+const filtered = users.filter((active) => active.active);
+console.log(filtered);
+const emails = filtered.map((emailed) => {
+  return emailed.email;
+});
+console.log(emails);
+*/
+/*
+const cart = [
+  { item: "Shoes", price: 2500 },
+  { item: "Shirt", price: 1500 },
+  { item: "Watch", price: 3000 },
+];
+const total = cart.reduce((total, price) => total + price.price, 0);
+console.log(total);
+*/
+/*
+const users = [
+  { name: "L", plan: "premium" },
+  { name: "Arya", plan: "free" },
+  { name: "Zoya", plan: "premium" },
+  { name: "Ishaan", plan: "free" },
+  { name: "Meera", plan: "standard" },
+  { name: "Rahul", plan: "premium" },
+];
+const plan = users.reduce((first, next) => {
+  first[next.plan] = (first[next.plan] || 0) + 1;
+  return first;
+}, {});
+console.log(plan);
+*/
+/*
+const users = [
+  { name: "L", plan: "premium" },
+  { name: "Arya", plan: "free" },
+  { name: "Zoya", plan: "premium" },
+  { name: "Ishaan", plan: "free" },
+  { name: "Meera", plan: "premium" },
+];
+
+const planWise = users.reduce((acc, user) => {
+  if (!acc[user.plan]) {
+    acc[user.plan] = [];
+  } else {
+    acc[user.plan].push(user.name);
+  }
+  return acc;
+}, {});
+console.log(planWise);
+*/
+/*
+const numbers = [5, 10, 15, 20];
+const total = numbers.reduce((sum, curr) => {
+  return sum + curr;
+}, 0);
+console.log(total);
+*/
+/*
+const cart = [
+  { item: "Shoes", price: 2500 },
+  { item: "Shirt", price: 1500 },
+  { item: "Watch", price: 3000 },
+];
+const totalPrice = cart.reduce((sum, curr) => {
+  return sum + curr.price;
+}, 0);
+console.log(totalPrice);
+*/
+/*
+const plans = ["free", "premium", "free", "premium", "free"];
+const times = plans.reduce((acc, user) => {
+  acc[user] = (acc[user] || 0) + 1;
+  return acc;
+}, {});
+console.log(times);
+*/
+/*
+const users = [
+  { name: "L", plan: "premium" },
+  { name: "Arya", plan: "free" },
+  { name: "Zoya", plan: "premium" },
+  { name: "Ishaan", plan: "free" },
+  { name: "Meera", plan: "premium" },
+];
+const planWise = users.reduce((acc, curr) => {
+  if (!acc[curr.plan]) {
+    acc[curr.plan] = [];
+  }
+  acc[curr.plan].push(curr.name);
+  return acc;
+}, {});
+console.log(planWise);
+*/
+/*
+const users = [
+  { name: "L", active: true, plan: "premium" },
+  { name: "Arya", active: false, plan: "free" },
+  { name: "Zoya", active: true, plan: "premium" },
+  { name: "Ishaan", active: false, plan: "free" },
+  { name: "Meera", active: true, plan: "free" },
+];
+
+const planWise = users.reduce((acc, curr) => {
+  if (!curr.active) return acc;
+  if (!acc[curr.plan]) {
+    acc[curr.plan] = [];
+  }
+  acc[curr.plan].push(curr.name);
+  return acc;
+}, {});
+console.log(planWise);
+*/
+/*
+function logNames(first, ...rest) {
+  console.log("First:", first);
+  console.log("Rest:", rest);
+}
+logNames("L", "Arya", "Zoya", "Meera");
+*/
+/*
+const baseUser = { name: "L", age: 26 };
+const location1 = { country: "India", city: "Delhi" };
+const all = { ...baseUser, ...location1 };
+
+const new1 = { verified: true, ...all };
+console.log(new1);
+*/
+/*
+const user1 = { skills: ["HTML", "CSS", "JavaScript"] };
+const user2 = { skills: ["Python", "CSS", "JavaScript", "React"] };
+const allSkills = [...new Set([...user2.skills, ...user1.skills])];
+console.log(allSkills);
+*/
+/*
+const product = {
+  name: "Laptop",
+  price: 45000,
+  brand: "TechPro",
+};
+const { name, price } = product;
+
+console.log(`${name} costs ${price}`);
+*/
+/*
+function showDetails({ name, brand }) {
+  return `${name} by ${brand}`;
+}
+console.log(showDetails({ name: "Phone", price: 30000, brand: "XenoTech" }));
+*/
+/*
+const user = {
+  name: "L",
+  contact: {
+    email: "l@example.com",
+    phone: "1234567890",
+  },
+};
+function details(product) {
+  const {
+    contact: { email },
+  } = product;
+  return `Email is ${email}`;
+}
+console.log(details(user));
+*/
+/*
+const order = {
+  id: 101,
+  customer: {
+    name: "Arya",
+    address: {
+      city: "Delhi",
+      zip: "110001",
+    },
+  },
+};
+function lives(product) {
+  const {
+    customer: { name },
+    customer: {
+      address: { city },
+    },
+  } = product;
+  return `${name} lives in ${city}`;
+}
+console.log(lives(order));
+*/
+/*
+
+const response = {
+  status: "success",
+  data: {
+    users: [
+      { name: "L", age: 26 },
+      { name: "Arya", age: 17 },
+      { name: "Zoya", age: 30 },
+    ],
+  },
+};
+function second(product) {
+  const {
+    data: {
+      users: [, { name }],
+    },
+  } = product;
+  return `Second user is ${name}`;
+}
+console.log(second(response));
+*/
+/*
+const fruits = [
+  "apple",
+  "banana",
+  "apple",
+  "orange",
+  "banana",
+  "grape",
+  "banana",
+  "apple",
+];
+const howMany = fruits.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+console.log(howMany);
+*/
+/*
+const users = [
+  { name: "L", age: 26 },
+  { name: "Arya", age: 17 },
+  { name: "Zoya", age: 30 },
+  { name: "Dev", age: 14 },
+  { name: "Meera", age: 22 },
+  { name: "Ravi", age: 19 },
+];
+
+const byAge = users.reduce((acc, user) => { teen: [], twenties: [], thirties: [] }
+{
+  if (user.age < 20) {
+    acc.age = (user.age || 0) + 1;
+    acc.name.push(user.name);
+    return acc;
+  }
+  if (user.age >= 20 && user.age < 30) {
+    acc.age = (user.age || 0) + 1;
+    acc.name.push(user.name);
+    return acc;
+  }
+  if (user.age >= 30) {
+    acc.age = (user.age || 0) + 1;
+    acc.name.push(user.name);
+    return acc;
+  }
+});
+console.log(byAge);
+*/
+/*
+const numbers = [2, 7, 4, 9, 12, 3, 6, 11];
+const seprated = numbers.reduce(
+  (acc, curr) => {
+    if (curr % 2 === 0) {
+      acc.even.push(curr);
+    } else {
+      acc.odd.push(curr);
+    }
+    return acc;
+  },
+  { even: [], odd: [] }
+);
+console.log(seprated);
+*/
+/*
+const sentence = "You are progressing extremely fast with reduce";
+const splited = sentence.split(" ");
+console.log(splited);
+const longestword = splited.reduce((longest, curr) => {
+  if (longest.length <= curr.length) {
+    longest = curr;
+  }
+  return longest;
+});
+console.log(longestword);
+*/
+/*
+const cart = [
+  { item: "T-shirt", price: 25, quantity: 2 },
+  { item: "Jeans", price: 60, quantity: 1 },
+  { item: "Hat", price: 15, quantity: 4 },
+  { item: "Shoes", price: 100, quantity: 1 },
+  { item: "Socks", price: 5, quantity: 10 },
+];
+const filtered = cart.filter((product) => product.price < 20);
+console.log(filtered);
+const modified = filtered.map(
+  (product) => `${product.item} x4 = ${product.price * 4}`
+);
+console.log(modified);
+const total = cart.reduce((acc, curr) => {
+  return acc + curr.price * curr.quantity;
+}, 0);
+console.log(total);
+*/
+/*
+const users = [
+  { name: "L", age: 26 },
+  { name: "Arya", age: 17 },
+  { name: "Zoya", age: 30 },
+];
+users.forEach((name, age) => {
+  console.log(`${name.name} is ${name.age} years old.`);
+});
+*/
+/*
+const todos = [
+  { id: 101, task: "Learn map", done: true },
+  { id: 102, task: "Practice findIndex", done: false },
+  { id: 103, task: "Master reduce", done: true },
+];
+
+const index = todos.findIndex((find) => !find.done);
+console.log(index);
+
+const { task } = todos[index];
+console.log(task);
+*/
+/*
+const users = [
+  { id: 1, name: "L", isOnline: false },
+  { id: 2, name: "Arya", isOnline: false },
+  { id: 3, name: "Zoya", isOnline: true },
+  { id: 4, name: "Kunal", isOnline: false },
+];
+const online = users.findIndex((user) => user.isOnline);
+console.log(online);
+const { name } = users[online];
+console.log(`User ${name} is online.`);
+*/
+/*
+const books = [
+  { title: "Atomic Habits", rating: 4.8 },
+  { title: "Deep Work", rating: 4.7 },
+  { title: "You Can Win", rating: 4.0 },
+  { title: "Ego is the Enemy", rating: 4.5 },
+  { title: "The 5 AM Club", rating: 4.1 },
+  { title: "The Power of Now", rating: 4.9 },
+];
+const top4books = books.slice(0, 4);
+console.log(top4books);
+const above45 = top4books.filter((book) => book.rating > 4.5);
+console.log(above45);
+const line = above45.map((book) => {
+  return `${book.title} has a rating of ${book.rating}`;
+});
+console.log(line);
+*/
+/*
+const languages = ["JavaScript", "Python", "C++", "Java", "Ruby"];
+languages.splice(1, 2, "TypeScript", "Go");
+console.log(languages);
+*/
+/*
+const shoppingList = ["Milk", "Eggs", "Bread", "Butter", "Cheese"];
+shoppingList.splice(2, 2, "Peanut Butter", "Jam", "Chocolate");
+console.log(shoppingList);
+*/
+/*
+const students = ["Alice", "Bob", "Charlie", "David", "Eve"];
+students.splice(2, 2, "Frank", "Grace");
+students.splice(4, 0, "Helen");
+console.log(students);
+*/
+/*
+const playlist = [
+  { id: 1, title: "Song A", liked: true },
+  { id: 2, title: "Song B", liked: false },
+  { id: 3, title: "Song C", liked: true },
+  { id: 4, title: "Song D", liked: false },
+];
+
+const remove = playlist.findIndex((song) => song.id === 2);
+const remove1 = playlist.findIndex((song) => song.id === 3);
+console.log(playlist);
+playlist.splice(remove, remove1, { id: 5, title: "Song X", liked: true });
+
+const uppercase = playlist.map((song) => song.title.toUpperCase());
+console.log(uppercase);
+*/
+/*
+const shelfA = [
+  { title: "Atomic Habits", rating: 4.8 },
+  { title: "Deep Work", rating: 4.7 },
+  { title: "You Can Win", rating: 4.0 },
+];
+
+const shelfB = [
+  { title: "Ego is the Enemy", rating: 4.5 },
+  { title: "The 5 AM Club", rating: 3.9 },
+];
+
+const rating = shelfA.filter((book) => book.rating > 4.5);
+const rating1 = shelfB.filter((book) => book.rating > 4.5);
+const combined = rating.concat(rating1);
+const uppercase = combined.map((book) => book.title.toUpperCase());
+console.log(uppercase);
+console.log(combined);
+*/
+/*
+const netflix = [
+  { title: "Inception", rating: 4.9 },
+  { title: "Bird Box", rating: 4.2 },
+  { title: "The Irishman", rating: 4.6 },
+];
+
+const prime = [
+  { title: "The Tomorrow War", rating: 4.3 },
+  { title: "Shershaah", rating: 4.8 },
+  { title: "Mirzapur", rating: 4.4 },
+];
+const combined = netflix.concat(prime);
+const top3 = combined.slice(0, 3);
+const uppercase = top3.map((book) => book.title.toUpperCase());
+console.log(uppercase);
+const average = top3.reduce((acc, curr) => {
+  acc + curr.rating;
+  return acc / 3;
+}, 0);
+console.log(average);
+*/
+/*
+const weeklyOrders = [
+  [120, 90, 100], // Monday
+  [80, 150], // Tuesday
+  [130, 160, 70], // Wednesday
+  [200], // Thursday
+  [110, 95], // Friday
+];
+
+const flattened = weeklyOrders.flat();
+console.log(flattened);
+const below100 = flattened.filter((number) => number >= 100);
+console.log(below100);
+const order = below100.map((number) => `Order: $${number}`);
+console.log(order);
+const total = below100.reduce((sum, number) => {
+  return sum + number;
+}, 0);
+console.log(total);
+*/
+/*
+
+const frontendCourses = [
+  { id: 1, title: "html basics", rating: 4.6, students: [80, 90] },
+  { id: 2, title: "css fundamentals", rating: 4.3, students: [95, 85] },
+  { id: 3, title: "javascript", rating: 4.8, students: [100, 90, 80] },
+];
+
+const backendCourses = [
+  { id: 4, title: "node.js", rating: 4.5, students: [70, 60, 50] },
+  { id: 5, title: "express", rating: 4.1, students: [40, 55] },
+  { id: 6, title: "databases", rating: 4.7, students: [90, 80] },
+];
+
+const combined = frontendCourses.concat(backendCourses);
+const studentsarray = combined.map((student) => student.students);
+const flattened = studentsarray.flat();
+const filtered = flattened.filter((number) => number >= 85);
+const scores = filtered.map((score) => `score: ${score}`);
+const totalStudents = combined.reduce((sum, student) => {
+  return sum + student.students.length;
+}, 0);
+const uppercase = combined.map((student) => student.title.toUpperCase());
+const javascriptRating = combined.findIndex(
+  (course) => course.title === "javascript"
+);
+const course = combined.findIndex((student) => student.title === "express");
+const toRemove = combined.splice(course, 1);
+console.log(combined);
+console.log(combined[javascriptRating]);
+console.log(uppercase);
+console.log(filtered);
+console.log(totalStudents);
+*/
+/*
+const users = [
+  { name: "L", role: "admin" },
+  { name: "Arya", role: "editor" },
+  { name: "Zoya", role: "viewer" },
+  { name: "Nav", role: "admin" },
+];
+users.forEach((user) => {
+  if (user.role === "admin") {
+    console.log(`ADMIN: ${user.name.toUpperCase()}`);
+  } else {
+    console.log(`USER: ${user.name}`);
+  }
+});
+*/
+/*
+const inventory = [
+  { name: "Milk", type: "dairy" },
+  { name: "Broccoli", type: "vegetable" },
+  { name: "Cheese", type: "dairy" },
+  { name: "Carrot", type: "vegetable" },
+  { name: "Butter", type: "dairy" },
+];
+const dairyItems = [];
+const vegetableItems = [];
+inventory.forEach((food) => {
+  if (food.type === "dairy") {
+    dairyItems.push(food.name.toUpperCase());
+  } else {
+    vegetableItems.push(food.name.toUpperCase());
+  }
+});
+console.log(dairyItems);
+console.log(vegetableItems);
+*/
+/*
+const products = [
+  { name: "Screwdriver", qualityScore: 85 },
+  { name: "Wrench", qualityScore: 90 },
+  { name: "Drill", qualityScore: 87 },
+  { name: "Hammer", qualityScore: 82 },
+];
+function checProductQuality(products) {
+  const atLeast80 = products.every((product) => product.qualityScore >= 80);
+  if (atLeast80) {
+    console.log("Batch Approved");
+  } else {
+    console.log("Batch Rejected");
+  }
+
+  products.forEach((element) => {
+    console.log(`${element.name.toUpperCase()}`);
+  });
+}
+checProductQuality(products);
+*/
+/*
+const students = [
+  { name: "L", classesAttended: 5 },
+  { name: "Arya", classesAttended: 6 },
+  { name: "Zoya", classesAttended: 4 },
+  { name: "Nav", classesAttended: 5 },
+];
+
+function checkAttendance(element) {
+  const attendance = element.every((student) => student.classesAttended >= 5);
+  console.log(
+    attendance
+      ? "All student are eligible"
+      : "Some students need to attend more"
+  );
+  element.forEach((student) => {
+    console.log(
+      student.classesAttended >= 5
+        ? `${student.name}: ✔ `
+        : `${student.name}: ❎`
+    );
+  });
+}
+checkAttendance(students);
+*/
+/*
+const examResults = [
+  { name: "L", scores: [55, 60, 75] },
+  { name: "Arya", scores: [45, 35, 50] },
+  { name: "Zoya", scores: [65, 70, 30] },
+  { name: "Nav", scores: [40, 50, 45] },
+];
+
+function checkPassStatus(result) {
+  result.forEach((element) => {
+    const checkPass = element.scores.every((student) => student >= 35);
+    console.log(
+      checkPass ? `${element.name}: Passed` : `${element.name}: failed`
+    );
+  });
+}
+checkPassStatus(examResults);
+*/
+/*
+const bootcamp = [
+  {
+    name: "L",
+    skills: ["JavaScript", "HTML", "CSS"],
+    scores: [80, 90, 85],
+  },
+  {
+    name: "Arya",
+    skills: ["HTML", "CSS"],
+    scores: [60, 55, 70],
+  },
+  {
+    name: "Zoya",
+    skills: ["JavaScript", "HTML", "CSS", "React"],
+    scores: [95, 88, 92],
+  },
+];
+
+bootcamp.forEach((students) => {
+  const checkPass = students.scores.every((student) => student >= 70);
+  const uppercase = students.skills.map((skill) => skill.toUpperCase());
+  if (checkPass) {
+    console.log(`${students.name} passed with skills: ${uppercase}`);
+  }
+  if (!checkPass) {
+    console.log(`${students.name} failed with skills: ${uppercase}`);
+  }
+  if (checkPass && students.skills.includes("React")) {
+    console.log();
+  }
+});
+*/
+/*
+const products = [
+  { name: "Laptop", discount: false },
+  { name: "Monitor", discount: false },
+  { name: "Keyboard", discount: true },
+  { name: "Mouse", discount: false },
+];
+
+const ifdiscount = products.some((item) => item.discount === true);
+console.log(ifdiscount ? "Discounts available" : "No discounts today");
+*/
+/*
+const users = [
+  {
+    name: "L",
+    books: [
+      { title: "Atomic Habits", late: false },
+      { title: "Deep Work", late: false },
+    ],
+  },
+  {
+    name: "Arya",
+    books: [
+      { title: "The Alchemist", late: true },
+      { title: "The Power of Now", late: false },
+    ],
+  },
+  {
+    name: "Zoya",
+    books: [{ title: "Ego is the Enemy", late: false }],
+  },
+];
+
+users.forEach((user) => {
+  const lateBook = user.books.some((book) => book.late === true);
+  const uppercase = user.books.map((book) => book.title.toUpperCase());
+  console.log(
+    !lateBook
+      ? `${user.name}: All books returned on time - ${uppercase.join(", ")}`
+      : `${user.name}: Late return - ${uppercase.join(", ")}`
+  );
+});
+*/
+/*
+const team = [
+  {
+    name: "L",
+    projects: [
+      { title: "Portfolio", completed: true, score: 95 },
+      { title: "Blog App", completed: true, score: 88 },
+    ],
+  },
+  {
+    name: "Arya",
+    projects: [
+      { title: "Todo App", completed: false, score: 60 },
+      { title: "Weather App", completed: true, score: 70 },
+    ],
+  },
+  {
+    name: "Zoya",
+    projects: [
+      { title: "Ecommerce", completed: true, score: 80 },
+      { title: "Game App", completed: true, score: 85 },
+    ],
+  },
+];
+
+team.forEach((member) => {
+  const ifProjectsCompleted = member.projects.every(
+    (project) => project.completed === true
+  );
+  const ifBelow70 = member.projects.some((scores) => scores.score < 70);
+  const highScorer = member.projects.filter((scores) => scores.score >= 80);
+  const uppercase = member.projects.map((titles) => titles.title.toUpperCase());
+  if (ifProjectsCompleted && !ifBelow70) {
+    console.log(`${member.name} passed: ${uppercase}`);
+  }
+  if (ifBelow70 || !ifProjectsCompleted) {
+    console.log(`${member.name} needs review: ${uppercase}`);
+  }
+});
+*/
+/*
+const users = [
+  {
+    name: "L",
+    workouts: [
+      { type: "Running", caloriesBurned: 300, completed: true },
+      { type: "Cycling", caloriesBurned: 250, completed: true },
+    ],
+  },
+  {
+    name: "Arya",
+    workouts: [
+      { type: "Yoga", caloriesBurned: 150, completed: false },
+      { type: "HIIT", caloriesBurned: 400, completed: true },
+    ],
+  },
+  {
+    name: "Zoya",
+    workouts: [
+      { type: "Walking", caloriesBurned: 100, completed: true },
+      { type: "Swimming", caloriesBurned: 350, completed: true },
+    ],
+  },
+];
+
+users.forEach((member) => {
+  const uncompleted = member.workouts.some(
+    (workout) => workout.completed === false
+  );
+  const totalCalories = member.workouts.reduce((sum, curr) => {
+    return sum + curr.caloriesBurned;
+  }, 0);
+  const uppercase = member.workouts.map((workout) =>
+    workout.type.toUpperCase()
+  );
+  console.log(
+    !uncompleted
+      ? `${member.name}: All done - Total calories: ${totalCalories} - ${uppercase}`
+      : `${member.name}: Incomplete - Total calories: ${totalCalories} - ${uppercase}`
+  );
+});
+*/
+/*
+const scores = [75, 95, 60, 88, 70, 100];
+scores.sort((a, b) => a - b);
+console.log(scores);
+scores.sort((a, b) => b - a);
+console.log(scores);
+*/
+/*
+const players = [
+  { name: "L", score: 120 },
+  { name: "Arya", score: 150 },
+  { name: "Zoya", score: 100 },
+];
+
+players.sort((a, b) => a.score - b.score);
+players.forEach((person) => {
+  console.log(`${person.name}: ${person.score}`);
+});
+players.sort((a, b) => b.score - a.score);
+players.forEach((person) => {
+  console.log(`${person.name}: ${person.score}`);
+});
+*/
+/*
+const players = [
+  { name: "L", score: 120, level: 3 },
+  { name: "Arya", score: 150, level: 2 },
+  { name: "Zoya", score: 150, level: 4 },
+  { name: "Nav", score: 120, level: 5 },
+];
+players.sort((a, b) => {
+  if (a.score !== b.score) return b.score - a.score;
+  else {
+    return a.score - b.score;
+  }
+});
+console.log(players);
+*/
+/*
+const rawMessage = "   Hello, I am learning javascript.    ";
+
+console.log(rawMessage.replace("javascript", " JavaScript"));
+console.log(rawMessage.trim());
+*/
+/*
+const rawTags = " html, css ,  javascript ,react ";
+const splitted = rawTags.trim().split(",");
+
+const cleaned = splitted.map((tag) => {
+  const trimmed = tag.trim();
+  return trimmed === "javascript" ? "JavaScript" : trimmed;
+});
+console.log(cleaned);
+*/
+/*
+const quote = "  success is not final, failure is not fatal.   ";
+const trimmed = quote
+  .trim()
+  .replace("success", "Success")
+  .replace("failure", "Failure");
+const splitted = trimmed === "final," ? "final" : trimmed.split(" ");
+const uppercase = console.log(splitted);
+*/
+/*
+const players = [
+  { name: "Arya", score: 150, level: 3 },
+  { name: "Zoya", score: 180, level: 2 },
+  { name: "L", score: 150, level: 2 },
+  { name: "Karan", score: 120, level: 4 },
+  { name: "Mira", score: 180, level: 3 },
+];
+
+const order = players.sort((a, b) => {
+  if (a.score !== b.score) return b.score - a.score;
+  else {
+    return a.level - b.level;
+  }
+});
+console.log(order);
+order.forEach((player) => {
+  console.log(`${player.name} (Level ${player.level}) - ${player.score} pts`);
+});
+*/
+/*
+const rawInput = "   apple, Banana , mango  ,  papaya,banana  , APPLE ";
+const cleaned = rawInput.trim().split(",");
+const cleaned1 = cleaned.map((fruit) => {
+  const trimmed = fruit.trim().toLowerCase();
+  return trimmed;
+});
+const fruitCount = cleaned1.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+console.log(fruitCount);
+*/
